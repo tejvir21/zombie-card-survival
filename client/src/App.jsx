@@ -2,7 +2,8 @@
 import { useGameStore } from "./store/gameStore";
 import { useSocketEvents } from "./hooks/useSocketEvents";
 import LobbyScreen from "./components/Lobby/LobbyScreen";
-import PhaserGame from "./components/Game/PhaserGame";
+// import PhaserGame from "./components/Game/PhaserGame";
+const PhaserGame = React.lazy(() => import("./components/Game/PhaserGame"));
 import GameHUD from "./components/HUD/GameHUD";
 import DuelScreen from "./components/Duel/DuelScreen";
 import MatchEndScreen from "./components/Game/MatchEndScreen";
