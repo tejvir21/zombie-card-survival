@@ -1,0 +1,46 @@
+# Node dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+
+# Vite / React build outputs
+dist/
+build/
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional runtime files
+*.log
+
+# Server and client local dev data
+server/**/*.log
+client/**/*.log
+
+# JetBrains IDE
+.idea/
+
+# npm package lock - keep if desired
+package-lock.json
+
+# Yarn
+yarn.lock
+
+# coverage
+coverage/
+
+# other
+*.tmp
+*.temp
