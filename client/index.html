@@ -2,13 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Prevent pinch zoom, set viewport tightly for mobile game -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Zombie Cards" />
+    <meta name="theme-color" content="#070f1a" />
     <title>☣ Zombie Card Survival</title>
-    <meta name="description" content="Real-time multiplayer zombie card survival — 10–20 players, card duels, infection mechanics" />
+    <meta name="description" content="Real-time multiplayer zombie card survival" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☣</text></svg>" />
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { background: #0a0a1a; overflow: hidden; }
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        background: #070f1a;
+        overflow: hidden;
+        overscroll-behavior: none;
+        /* Safe area insets for iPhone notch / home bar */
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+        touch-action: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      /* Disable default touch behaviors that interfere with the game */
+      canvas { touch-action: none; display: block; }
     </style>
   </head>
   <body>
